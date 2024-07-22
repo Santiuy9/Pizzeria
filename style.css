@@ -5,10 +5,11 @@
     text-decoration: none;
     list-style: none;
 }
-body {
-    background: url(img/backgroung.png), no-repeat;
-    background-size: cover;
-    overflow-x: hidden;
+.background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
 }
 
 header {
@@ -19,6 +20,10 @@ header {
     background-color: rgba(0, 0, 0, 0.9);
     align-items: center;
     justify-content: center;
+}
+
+i, p, span {
+    color: rgb(239, 221, 21);
 }
 
 .logo {
@@ -45,7 +50,7 @@ main {
 
 h2 {
     color: white;
-    margin: 5px;
+    margin: 10px;
     text-align: center;
 }
 
@@ -62,6 +67,7 @@ p {
 }
 
 .slider {
+    margin-top: 20px;
     display: flex;
     width: 90vw;
     justify-content: center;
@@ -85,15 +91,20 @@ img {
     flex-wrap: wrap;
     justify-content: center;
 }
-.card {
+.card-1, .card-2, .card-3, .card-4 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 45vw;
-    height: 45vw;
+    width: 40vw;
+    height: 40vw;
     margin: 10px;
     background-color: rgba(0, 0, 0, 0.9);
     overflow: hidden;
+    transition: transform 0.3s ease-in;
+}
+
+.card:hover {
+    transform: scale(1.3);
 }
 
 .comentarios {
@@ -115,20 +126,52 @@ img {
 }
 
 .commit img {
-    width: 70px;
+    width: 50px;
+    margin: 10px;
 }
 
-footer {
+.social-media {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     position: fixed;
     bottom: 0;
     width: 100vw;
     height: 30px;
     background-color: rgba(0, 0, 0, 0.9);
     margin-top: 35px;
+    transition: background-color 1s ease;
+
 }
+
+.fa-brands {
+    margin: 10px;
+}
+
+.social-media:target {
+    animation: bounce 5s ease-in;    
+}
+
+/* .social-media:target div span, .social-media:target div i {
+    color: rgb(239, 221, 21)
+} */
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+        
+        
+    }
+    30%, 70% {
+        transform: translateY(-50vh);
+        background-color: #f0f0f0;
+    }
+    
+}
+
 @media (min-width: 750px){
     .slider {
         width: 600px;
-        overflow: ;
+        
     }
 }

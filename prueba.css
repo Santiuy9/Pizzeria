@@ -1,0 +1,22 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.content {
+    margin-bottom: 20px;
+}
+
+.section {
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.section:target {
+    background-color: #f0f0f0;
+    transform: translateY(20px); /* Ajusta este valor según lo que necesites */
+}
