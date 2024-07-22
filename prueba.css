@@ -1,22 +1,49 @@
-/* Estilos generales */
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-.content {
-    margin-bottom: 20px;
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-wrap: wrap;
 }
 
-.section {
-    padding: 20px;
-    margin: 20px 0;
-    border: 1px solid #ccc;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+.div-checkbox {
+    display: none;
 }
 
-.section:target {
+/* Estilo general para los divs */
+.div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
     background-color: #f0f0f0;
-    transform: translateY(20px); /* Ajusta este valor según lo que necesites */
+    margin: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+/* Por defecto, todos los divs son visibles */
+.div {
+    display: flex;
+}
+
+/* Cuando un checkbox está marcado, oculta los demás divs */
+.div-checkbox:not(:checked) ~ .div {
+    display: none;
+}
+
+/* Asegura que el div correspondiente al checkbox seleccionado sea visible */
+#show-div-1:checked ~ .div:nth-of-type(1),
+#show-div-2:checked ~ .div:nth-of-type(2),
+#show-div-3:checked ~ .div:nth-of-type(3),
+#show-div-4:checked ~ .div:nth-of-type(4) {
+    display: flex;
 }
