@@ -1,64 +1,14 @@
-/* Estilo base para .social-media */
-.social-media {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    position: fixed;
-    bottom: 0;
-    width: 100vw;
-    height: 30px;
-    background-color: rgba(0, 0, 0, 0.9);
-    margin-top: 35px;
-    transition: background-color 1s ease;
-}
-
-/* Estilo para los íconos y texto */
-.social-media div i,
-.social-media div span {
-    color: white; /* Color original */
-    transition: color 5s ease;
-}
-
-/* Estilos aplicados cuando el checkbox está marcado */
-#toggle:checked ~ .social-media {
-    animation: bounce 5s ease;
-}
-
-#toggle:checked ~ .social-media div i,
-#toggle:checked ~ .social-media div span {
-    animation: colorChange 5s ease;
-}
-
-/* Animación bounce para el fondo */
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-        background-color: rgba(0, 0, 0, 0.9); /* Color de fondo inicial */
+/* Define la animación de desvanecimiento */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
     }
-    30%, 60% {
-        transform: translateY(-50vh);
-        background-color: white; /* Color de fondo durante el rebote */
+    to {
+        opacity: 0;
     }
 }
 
-/* Animación colorChange para el texto */
-@keyframes colorChange {
-    0% {
-        color: white; /* Color original */
-    }
-    30%, 60% {
-        color: black; /* Color durante el rebote */
-    }
-    100% {
-        color: white; /* Volver al color original */
-    }
-}
-
-/* Estilo para el label */
-.trigger {
-    cursor: pointer;
-    color: blue;
-    font-size: 18px;
-    margin: 10px;
-    padding: 5px;
+/* Clase que aplica la animación */
+.fade-out {
+    animation: fadeOut 1s forwards;
 }

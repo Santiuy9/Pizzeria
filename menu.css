@@ -1,0 +1,185 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    list-style: none;
+    color: white;
+}
+
+/* Background and header styles */
+.background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+header {
+    display: flex;
+    position: relative;
+    width: 100vw;
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+    animation: slideDown 1s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Logo styles */
+.logo {
+    width: 50px;
+}
+
+ul {
+    display: flex;
+}
+
+li {
+    margin: 0 5px;
+}
+
+h2 {
+    color: white;
+    margin: 20px;
+    text-align: center;
+}
+
+/* Main and menu styles */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 100px; /* To provide space for the footer */
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+}
+
+.accordion {
+    width: 100%;
+}
+
+.accordion-item {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin: 10px 0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.accordion-title {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-title:hover {
+    background-color: rgb(235, 170, 15);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 15px; /* Maintain padding for content visibility */
+    opacity: 0; /* Start with content hidden */
+    transition: max-height 1s ease-out, padding 1s ease-out, opacity 0.5s ease-out;
+}
+
+.accordion-item input[type="checkbox"] {
+    display: none;
+}
+
+.accordion-item input[type="checkbox"]:checked ~ .accordion-content {
+    max-height: 500px; /* Adjust this value as needed */
+    padding: 15px;
+    opacity: 1; /* Show content */
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.item {
+    position: relative;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.item:hover {
+    background-color: rgba(255, 0, 0, 0.2); /* Soft red background on hover */
+}
+
+.item-options {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.item:hover .item-options {
+    display: block; /* Show options on hover */
+}
+
+.item-options a {
+    color: white;
+    margin: 0 5px;
+}
+
+/* Footer styles */
+.social-media {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.9);
+    margin-top: 35px;
+    transition: background-color 1s ease;
+}
+
+/* Animation for social media links */
+.social-media div i {
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-media div:hover i {
+    animation: bounce 1s ease;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    30%, 60% {
+        transform: translateY(-10px);
+        color: rgb(235, 170, 15);
+    }
+}
+
+.fa-brands {
+    margin: 10px;
+}

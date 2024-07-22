@@ -3,39 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        #toggle:checked ~ .social-media {
-            background-color: white;
-        }
-
-        #toggle:checked ~ .social-media div span,
-        #toggle:checked ~ .social-media div i {
-            color: black;
-        }
-        
-        .social-media {
-            background-color: rgba(0, 0, 0, 0.9);
-        }
-
-        .trigger {
-            cursor: pointer;
-            color: white;
-            background-color: rgba(0, 0, 0, 0.9);
-            padding: 10px;
-            border-radius: 5px;
-            display: inline-block;
-        }
-    </style>
+    <link rel="stylesheet" href="prueba.css">
     <title>Prueba</title>
 </head>
 <body>
-    <input type="checkbox" id="toggle">
-    <label for="toggle" class="trigger">Contacto</label>
-
-    <div class="social-media">
-        <div class="fb"><i class="fa-brands fa-square-facebook"></i><span>Pizzarriba</span></div>
-        <div class="ig"><i class="fa-brands fa-square-instagram"></i><span>Pizzarriba</span></div>
-        <div class="wpp"><i class="fa-brands fa-whatsapp"></i><span>0123456789</span></div>
-    </div>
+    <a href="nueva_pagina.html" class="animacion-enlace">Ir a nueva página</a>
+    <a href="leche.html" class="animacion-enlace">Lechecita</a>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const enlaces = document.querySelectorAll('.animacion-enlace');
+            enlaces.forEach(function(enlace) {
+                enlace.addEventListener('click', function(event) {
+                    event.preventDefault(); // Prevenir la navegación inmediata
+                    const url = this.href; // Obtener la URL del enlace
+                    document.body.classList.add('fade-out'); // Aplicar la animación
+        
+                    // Esperar a que la animación termine antes de redirigir
+                    setTimeout(function() {
+                        window.location.href = url;
+                    }, 1000); // Duración de la animación en milisegundos
+                });
+            });
+        });
+    </script>
 </body>
 </html>

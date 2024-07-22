@@ -16,13 +16,14 @@
 
 header {
     display: flex;
-    position: relative;
+    position: fixed;
     width: 100vw;
     height: 70px;
     background-color: rgba(0, 0, 0, 0.9);
     align-items: center;
     justify-content: center;
     animation: slideDown 1s ease-out;
+    z-index: 1;
 }
 
 @keyframes slideDown {
@@ -52,112 +53,14 @@ li {
     cursor: pointer;
 }
 
-h2 {
-    color: white;
-    margin: 10px;
-    text-align: center;
-}
-
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.galeria {
-    text-align: center;
-    transition: opacity 1s ease;
-}
-
-.slider {
-    margin-top: 20px;
-    display: flex;
-    width: 90vw;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.slider--iner {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    transition: transform 1s ease-in-out;
-}
-
-img {
-    width: 100%;
-}
-
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    transition: transform 0.5s ease-in-out;
-}
-
-.card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 40vw;
-    height: 40vw;
-    margin: 10px;
-    background-color: rgba(0, 0, 0, 0.9);
-    overflow: hidden;
-    transition: transform 0.5s ease;
-}
-
-.card:hover {
-    transform: scale(1.25);
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
-    background-color: rgb(235, 170, 15);
-}
-
-.comentarios {
-    margin-bottom: 35px;
-}
-
-.commits {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.commit {
-    display: flex;
-    width: 90vw;
-    height: 10vh;
-    background-color: rgba(0, 0, 0, 0.9);
-    margin: 5px 0;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.5s ease forwards;
-}
-
-.commit img {
-    width: 50px;
-    margin: 5px;
-}
-
-.commit:nth-child(1) {
-    animation-delay: 0.2s;
-}
-.commit:nth-child(2) {
-    animation-delay: 0.4s;
-}
-.commit:nth-child(3) {
-    animation-delay: 0.6s;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.espaciado-top {   
+    margin-top: 100px;
 }
 
 .social-media {
@@ -196,4 +99,26 @@ img {
         width: 300px;
         height: auto;
     }
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+        scale: 25%;
+    }
+    100% {
+        opacity: 1;
+        scale: 100%;
+    }
+}
+
+img, .commit {
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+
+    animation-timeline: --image;
+    animation-name: show;
+
+    animation-range: entry 25% cover 50%;
+    animation-fill-mode: both;
 }

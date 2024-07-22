@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     
     const checkbox = document.getElementById('toggle');
-    const duration = 5000; 
+    const duration = 3500; 
 
     if (checkbox) {
         checkbox.addEventListener('change', () => {
@@ -62,3 +62,31 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     var commits = document.querySelectorAll('.commit');
+
+//     // Callback function for Intersection Observer
+//     var callback = function(entries, observer) {
+//         entries.forEach(entry => {
+//             if (entry.isIntersecting) {
+//                 entry.target.style.animation = 'fadeInUp 0.5s ease forwards';
+//                 // Unobserve the entry after animation is applied
+//                 observer.unobserve(entry.target);
+//             }
+//         });
+//     };
+
+//     // Options for the observer (which part of the element to observe)
+//     var options = {
+//         threshold: 0.1
+//     };
+
+//     // Create an Intersection Observer
+//     var observer = new IntersectionObserver(callback, options);
+
+//     // Observe each commit element
+//     commits.forEach(commit => {
+//         observer.observe(commit);
+//     });
+// });
