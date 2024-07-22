@@ -7,18 +7,12 @@
     color: white;
 }
 
-body {
-    overflow: hidden;
-}
-
 .background {
     position: fixed;
     width: 100vw;
     height: 100vh;
     z-index: -1;
 }
-
-/* HEADER */
 
 header {
     display: flex;
@@ -54,12 +48,15 @@ li {
     margin: 0 5px;
 }
 
+.trigger {
+    cursor: pointer;
+}
+
 h2 {
+    color: white;
     margin: 10px;
     text-align: center;
 }
-
-/* MAIN */
 
 main {
     display: flex;
@@ -163,57 +160,25 @@ img {
     }
 }
 
-/* FOOTER */
-
 .social-media {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     position: fixed;
     bottom: 0;
     width: 100vw;
     height: 30px;
     background-color: rgba(0, 0, 0, 0.9);
     margin-top: 35px;
-    transition: background-color 1s ease-in;
+    transition: background-color 1s ease, transform 1s ease;
 }
 
-.social-media div i,
-.social-media div span {
-    color: white;
-    transition: color 1s ease-in-out;
-}
-
-.social-media:target div i,
-.social-media:target div span {
-    animation: CambioColor 5s ease;
-}
-
-.social-media:target {
-    animation: bounce 5s ease;
-}
-
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-        
-    }
-    30%, 70% {
-        transform: translateY(-50vh);
-        background-color: white;
-    }
-}
-@keyframes CambioColor {
-    0%, 100% {
-        color: white;
-    }
-    30%, 70% {
-        color: black
-    }
+.social-media div:hover i {
+    animation: bounce_2 1s ease;
 }
 
 .fa-brands {
-    margin: 5px;
+    margin: 10px;
 }
 
 @media (min-width: 750px){

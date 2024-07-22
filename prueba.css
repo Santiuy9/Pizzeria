@@ -1,49 +1,64 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-.container {
+/* Estilo base para .social-media */
+.social-media {
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
-    flex-wrap: wrap;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.9);
+    margin-top: 35px;
+    transition: background-color 1s ease;
 }
 
-.div-checkbox {
-    display: none;
+/* Estilo para los íconos y texto */
+.social-media div i,
+.social-media div span {
+    color: white; /* Color original */
+    transition: color 5s ease;
 }
 
-/* Estilo general para los divs */
-.div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100px;
-    height: 100px;
-    background-color: #f0f0f0;
-    margin: 10px;
-    border: 1px solid #ccc;
+/* Estilos aplicados cuando el checkbox está marcado */
+#toggle:checked ~ .social-media {
+    animation: bounce 5s ease;
+}
+
+#toggle:checked ~ .social-media div i,
+#toggle:checked ~ .social-media div span {
+    animation: colorChange 5s ease;
+}
+
+/* Animación bounce para el fondo */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+        background-color: rgba(0, 0, 0, 0.9); /* Color de fondo inicial */
+    }
+    30%, 60% {
+        transform: translateY(-50vh);
+        background-color: white; /* Color de fondo durante el rebote */
+    }
+}
+
+/* Animación colorChange para el texto */
+@keyframes colorChange {
+    0% {
+        color: white; /* Color original */
+    }
+    30%, 60% {
+        color: black; /* Color durante el rebote */
+    }
+    100% {
+        color: white; /* Volver al color original */
+    }
+}
+
+/* Estilo para el label */
+.trigger {
     cursor: pointer;
-}
-
-/* Por defecto, todos los divs son visibles */
-.div {
-    display: flex;
-}
-
-/* Cuando un checkbox está marcado, oculta los demás divs */
-.div-checkbox:not(:checked) ~ .div {
-    display: none;
-}
-
-/* Asegura que el div correspondiente al checkbox seleccionado sea visible */
-#show-div-1:checked ~ .div:nth-of-type(1),
-#show-div-2:checked ~ .div:nth-of-type(2),
-#show-div-3:checked ~ .div:nth-of-type(3),
-#show-div-4:checked ~ .div:nth-of-type(4) {
-    display: flex;
+    color: blue;
+    font-size: 18px;
+    margin: 10px;
+    padding: 5px;
 }
