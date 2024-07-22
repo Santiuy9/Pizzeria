@@ -212,21 +212,6 @@ img {
     }
 }
 
-
-.social-media div:hover i {
-    animation: saltito 1s ease infinite;
-}
-
-@keyframes saltito {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    30%, 60% {
-        transform: translateY(-10px);
-        color: rgb(235, 170, 15);
-    }
-}
-
 .fa-brands {
     margin: 5px;
 }
