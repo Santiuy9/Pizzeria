@@ -7,12 +7,18 @@
     color: white;
 }
 
+body {
+    overflow: hidden;
+}
+
 .background {
     position: fixed;
     width: 100vw;
     height: 100vh;
     z-index: -1;
 }
+
+/* HEADER */
 
 header {
     display: flex;
@@ -49,10 +55,11 @@ li {
 }
 
 h2 {
-    color: white;
     margin: 10px;
     text-align: center;
 }
+
+/* MAIN */
 
 main {
     display: flex;
@@ -156,49 +163,61 @@ img {
     }
 }
 
+/* FOOTER */
+
 .social-media {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     position: fixed;
     bottom: 0;
     width: 100vw;
     height: 30px;
     background-color: rgba(0, 0, 0, 0.9);
     margin-top: 35px;
-    transition: background-color 1s ease;
+    transition: background-color 1s ease-in;
 }
 
-.social-media div i {
-    transition: transform 0.3s ease-in-out;
+.social-media div i,
+.social-media div span {
+    color: white;
+    transition: color 1s ease-in-out;
 }
 
-.social-media div span, .social-media div i {
-    animation: change_color 5s ease-in;
+.social-media:target div i,
+.social-media:target div span {
+    animation: CambioColor 5s ease;
 }
 
-.social-media div:hover i {
-    animation: bounce_2 1s ease;
+.social-media:target {
+    animation: bounce 5s ease;
 }
 
-@keyframes change_color {
-    0%, 100% {
-        color: white;
-    }
-    30%, 70% {
-        color: black;
-    }
-}
 @keyframes bounce {
     0%, 100% {
         transform: translateY(0);
+        
     }
     30%, 70% {
         transform: translateY(-50vh);
         background-color: white;
     }
 }
-@keyframes bounce_2 {
+@keyframes CambioColor {
+    0%, 100% {
+        color: white;
+    }
+    30%, 70% {
+        color: black
+    }
+}
+
+
+.social-media div:hover i {
+    animation: saltito 1s ease infinite;
+}
+
+@keyframes saltito {
     0%, 100% {
         transform: translateY(0);
     }
@@ -209,11 +228,7 @@ img {
 }
 
 .fa-brands {
-    margin: 10px;
-}
-
-.social-media:target {
-    animation: bounce 5s ease-in;    
+    margin: 5px;
 }
 
 @media (min-width: 750px){
