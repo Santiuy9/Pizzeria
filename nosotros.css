@@ -8,5 +8,22 @@ p {
 }
 
 img {
-    width: 100%;
+    width: 85%;
+}
+
+.centrado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p {
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+
+    animation-timeline: --image;
+    animation-name: show;
+
+    animation-range: entry 25% cover 50%;
+    animation-fill-mode: both;
 }
