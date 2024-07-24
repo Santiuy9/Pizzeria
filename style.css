@@ -7,11 +7,10 @@
     color: white;
 }
 
-.background {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
+body {
+    background: url(img/backgroung.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 header {
@@ -21,7 +20,7 @@ header {
     height: 70px;
     background-color: rgba(0, 0, 0, 0.9);
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     animation: slideDown 1s ease-out;
     z-index: 1;
 }
@@ -46,10 +45,19 @@ ul {
 }
 
 li {
-    margin: 0 5px;
+    background-color: rgb(235, 170, 15);
+    margin: 0 10px;
+    padding: 3px;
+    border-radius: 5px;
+    
+}
+
+a {
+    color: black;
 }
 
 .trigger {
+    color: black;
     cursor: pointer;
 }
 
@@ -86,6 +94,21 @@ main {
     margin: 10px;
 }
 
+@media (min-width: 665px){
+    .slider {
+        width: 600px;
+    }
+    .commit {
+        width: 600px;
+    }
+}
+@media (min-width: 750px){
+    .card {
+        width: 300px;
+        height: auto;
+    }
+}
+
 @keyframes show {
     0% {
         opacity: 0;
@@ -106,19 +129,4 @@ img, .commit {
 
     animation-range: entry 25% cover 50%;
     animation-fill-mode: both;
-}
-
-@media (min-width: 665px){
-    .slider {
-        width: 600px;
-    }
-    .commit {
-        width: 600px;
-    }
-}
-@media (min-width: 750px){
-    .card {
-        width: 300px;
-        height: auto;
-    }
 }

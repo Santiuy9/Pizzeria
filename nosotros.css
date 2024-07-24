@@ -15,6 +15,7 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 30px;
 }
 
 p {
@@ -24,6 +25,18 @@ p {
     animation-timeline: --image;
     animation-name: show;
 
-    animation-range: entry 25% cover 50%;
+    animation-range: entry 5% cover 20%;
     animation-fill-mode: both;
+}
+
+@media (min-width: 700px) {
+    .espaciado-top {
+        margin-top: 50px;
+    }
+    .centrado {
+        padding: 100px;
+    }
+    img {
+        width: 700px;
+    }
 }
