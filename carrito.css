@@ -13,7 +13,7 @@
 }
 
 .pedido {
-    width: 90%;
+    width: 60%;
     height: 500px;
     display: flex;
     flex-direction: column;
@@ -164,6 +164,7 @@
 @media (min-width: 665px) {
     .cart-box {
         flex-direction: row;
+        justify-content: center;
     }
     
 }
