@@ -3,28 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitio de Apuestas</title>
     <link rel="stylesheet" href="prueba.css">
-    <title>Prueba</title>
 </head>
 <body>
-    <a href="nueva_pagina.html" class="animacion-enlace">Ir a nueva página</a>
-    <a href="leche.html" class="animacion-enlace">Lechecita</a>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const enlaces = document.querySelectorAll('.animacion-enlace');
-            enlaces.forEach(function(enlace) {
-                enlace.addEventListener('click', function(event) {
-                    event.preventDefault(); // Prevenir la navegación inmediata
-                    const url = this.href; // Obtener la URL del enlace
-                    document.body.classList.add('fade-out'); // Aplicar la animación
+    <header>
+        <h1>Sitio de Apuestas</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Deportes</a></li>
+                <li><a href="#">Casino</a></li>
+                <li><a href="#">Promociones</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="intro">
+            <h2>Bienvenido a nuestro sitio de apuestas</h2>
+            <p>Disfruta de la mejor experiencia en apuestas deportivas y de casino.</p>
+        </section>
         
-                    // Esperar a que la animación termine antes de redirigir
-                    setTimeout(function() {
-                        window.location.href = url;
-                    }, 1000); // Duración de la animación en milisegundos
-                });
-            });
-        });
-    </script>
+        <section class="search">
+            <input type="text" id="search-input" placeholder="Buscar eventos..." onkeyup="searchEvents()">
+        </section>
+        
+        <section class="featured" id="featured-events">
+            <h2>Eventos Destacados</h2>
+            <div class="event">
+                <h3>Final de la Champions League</h3>
+                <p>Apuesta en el partido más esperado del año.</p>
+            </div>
+            <div class="event">
+                <h3>Gran Premio de Fórmula 1</h3>
+                <p>No te pierdas las mejores cuotas para la carrera.</p>
+            </div>
+            <div class="event">
+                <h3>Torneo de Poker</h3>
+                <p>Participa y gana grandes premios en nuestro torneo semanal.</p>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Sitio de Apuestas. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="prueba.js"></script>
 </body>
 </html>

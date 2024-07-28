@@ -11,14 +11,14 @@ if (sliderInner) {
         }
     }, 5000);
 }
-document.querySelectorAll('.card').forEach(card => {
-    card.addEventListener('click', function() {
+// document.querySelectorAll('.card').forEach(card => {
+//     card.addEventListener('click', function() {
         
-        document.querySelectorAll('.card').forEach(c => c.classList.remove('active'));
+//         document.querySelectorAll('.card').forEach(c => c.classList.remove('active'));
         
-        this.classList.add('active');
-    });
-});
+//         this.classList.add('active');
+//     });
+// });
 
 document.addEventListener('DOMContentLoaded', function() {
     var toggle = document.getElementById('toggle');
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
     toggle.addEventListener('change', function() {
         if (toggle.checked) {
             
-            socialMedia.style.backgroundColor = 'white';
+            socialMedia.style.backgroundColor = 'rgb(235, 170, 15)';
             socialMedia.querySelectorAll('i, span').forEach(function(el) {
                 el.style.color = 'black';
             });
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             socialMedia.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
             socialMedia.querySelectorAll('i, span').forEach(function(el) {
-                el.style.color = 'white';
+                el.style.color = 'rgb(235, 170, 15)';
             });
             socialMedia.style.transform = 'translateY(0)';
         }
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     
                     socialMedia.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
                     socialMedia.querySelectorAll('i, span').forEach(function(el) {
-                        el.style.color = 'white';
+                        el.style.color = 'rgb(235, 170, 15)';
                     });
                     socialMedia.style.transform = 'translateY(0)';
                 }, duration); 

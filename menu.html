@@ -9,13 +9,14 @@
     <title>Pizza Club</title>
 </head>
 <body>
-    <!-- <img class="background" src="img/backgroung.png" alt=""> -->
+    <img class="background" src="img/backgroung.png" alt="">
+    
     <header>
         <div><a href="index.html"><img class="logo" src="img/logo.png" alt="Logo"></a></div>
         <nav>
             <ul>
                 <li><a href="#">Menú</a></li>
-                <li><a href="#">Pedinos</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
                 <li><a href="nosotros.html">Nosotros</a></li>
                 <li>
                     <input type="checkbox" id="toggle" style="display:none;">
@@ -25,8 +26,10 @@
         </nav>
     </header>
     
+    
     <main>
-        <h2 class="espaciado-top">Nuestro Menú</h2>
+        <div class="up-space"></div>
+        <h2>Nuestro Menú</h2>
         <div class="menu">
             <div class="accordion">
                 <div class="accordion-item">
@@ -37,14 +40,16 @@
                             <h4>Pizza Margherita</h4>
                             <p>Mozzarella, tomate, y albahaca.</p>
                             <div class="item-options">
-                                <a href="#">Agregar al carrito</a>
+                                <a href="#"><i class="fa-solid fa-cart-plus"> $300</i></a>
+                                <!-- <a class="no-ver" href="#">Agregar al carrito</a> -->
                             </div>
                         </div>
                         <div class="item">
                             <h4>Pizza Pepperoni</h4>
                             <p>Pepperoni, mozzarella, y salsa de tomate.</p>
                             <div class="item-options">
-                                <a href="#">Agregar al carrito</a>
+                                <a href="#"><i class="fa-solid fa-cart-plus"> $300</i></a>
+                                <!-- <a class="no-ver" href="#">Agregar al carrito</a> -->
                             </div>
                         </div>
                         <!-- Añadir más pizzas aquí -->
@@ -58,14 +63,16 @@
                             <h4>Hamburguesa Clásica</h4>
                             <p>Carne, queso, lechuga, tomate, y cebolla.</p>
                             <div class="item-options">
-                                <a href="#">Agregar al carrito</a>
+                                <a href="#"><i class="fa-solid fa-cart-plus"> $300</i></a>
+                                <!-- <a class="no-ver" href="#">Agregar al carrito</a> -->
                             </div>
                         </div>
                         <div class="item">
                             <h4>Hamburguesa BBQ</h4>
                             <p>Carne, queso, cebolla frita, y salsa BBQ.</p>
                             <div class="item-options">
-                                <a href="#">Agregar al carrito</a>
+                                <a href="#"><i class="fa-solid fa-cart-plus"> $300</i></a>
+                                <!-- <a class="no-ver" href="#">Agregar al carrito</a> -->
                             </div>
                         </div>
                         <!-- Añadir más hamburguesas aquí -->
@@ -79,14 +86,16 @@
                             <h4>Espagueti a la Boloñesa</h4>
                             <p>Espagueti, salsa de tomate, y carne molida.</p>
                             <div class="item-options">
-                                <a href="#">Agregar al carrito</a>
+                                <a href="#"><i class="fa-solid fa-cart-plus"> $300</i></a>
+                                <!-- <a class="no-ver" href="#">Agregar al carrito</a> -->
                             </div>
                         </div>
                         <div class="item">
                             <h4>Fettuccine Alfredo</h4>
                             <p>Fettuccine, salsa Alfredo, y pollo.</p>
                             <div class="item-options">
-                                <a href="#">Agregar al carrito</a>
+                                <a href="#"><i class="fa-solid fa-cart-plus"> $300</i></a>
+                                <!-- <a class="no-ver" href="#">Agregar al carrito</a> -->
                             </div>
                         </div>
                         <!-- Añadir más pastas aquí -->
@@ -100,14 +109,16 @@
                             <h4>Coqueta</h4>
                             <p>La mas hermosa de todas</p>
                             <div class="item-options">
-                                <a href="#">Agregar al carrito</a>
+                                <a href="#"><i class="fa-solid fa-cart-plus"> $300</i></a>
+                                <!-- <a class="no-ver" href="#">Agregar al carrito</a> -->
                             </div>
                         </div>
                         <div class="item">
                             <h4>Quilmesita</h4>
                             <p>La cervecita nuestra de cada dia.</p>
                             <div class="item-options">
-                                <a href="#">Agregar al carrito</a>
+                                <a href="#"><i class="fa-solid fa-cart-plus"> $300</i></a>
+                                <!-- <a class="no-ver" href="#">Agregar al carrito</a> -->
                             </div>
                         </div>
                         <!-- Añadir más pastas aquí -->
@@ -115,11 +126,11 @@
                 </div>
             </div>
         </div>
+        <div class="down-space"></div>
     </main>
-
     <footer id="pie" class="social-media">
         <div class="fb"><i class="fa-brands fa-square-facebook"></i><span>Pizzarriba</span></div>
-        <div class="ig"><i class="fa-brands fa-square-instagram"></i><span>Pizzarriba</span></div>
+        <div class="ig"><i class="fa-brands fa-instagram"></i><span>Pizzarriba</span></div>
         <div class="wpp"><i class="fa-brands fa-whatsapp"></i><span>0123456789</span></div>
     </footer>
 

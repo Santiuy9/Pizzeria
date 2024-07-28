@@ -10,7 +10,7 @@
     <title>Pizza Club</title>
 </head>
 <body>
-    <!-- <img class="background" src="img/backgroung.png" alt=""> -->
+    <img class="background" src="img/backgroung.png" alt="">
     <header class="navbar">
         <div>
             <a href="index.html">
@@ -20,7 +20,7 @@
         <nav>
             <ul>
                 <li><a href="menu.html">Menu</a></li>
-                <li><a href="#">Pedinos</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
                 <li><a href="nosotros.html">Nosotros</a></li>
                 <li>
                     <input type="checkbox" id="toggle" class="toggle" style="display:none;">
@@ -32,7 +32,8 @@
     </header>
 
     <main>
-       <section id="galeria" class="galeria">
+        <div class="up-space"></div>
+        <section id="galeria" class="galeria">
             <div class="slider">    
                 <div class="slider--iner">
                     <img src="img/slide_3.png" alt="">
@@ -49,29 +50,45 @@
                     <p class="titulo-card">Familiar</p>
                     <div class="image-container">
                         <img src="img/promo_1.png" alt="">
-                        <a href="#"><p  class="text-overlay">Soy la familiar, llevame para compartir con tus parientes</p></a>
+                        <div class="text-overlay">
+                            <p>Llevame para compartir con tus parientes</p>
+                            <a class="item-options" href="#"><i class="fa-solid fa-cart-plus"> $900</i></a>
+                        </div>
                     </div>
                     
                 </div>
+
                 <div id="para2" class="card card-2">
                     <p class="titulo-card">Para 2</p>
                     <div class="image-container">
                         <img src="img/promo_2.png" alt="">
-                        <a href="#para2"><p class="text-overlay">Especial para compartir con la traidora</p></a>
+                        <div class="text-overlay">
+                            <p>Especial para compartir con la traidora</p>
+                            <a class="item-options" href="#"><i class="fa-solid fa-cart-plus"> $650</i></a>
+                        </div>
                     </div>
                 </div>
+
                 <div id="bajonera" class="card card-3">
                     <p class="titulo-card">Bajonera</p>
                     <div class="image-container">
                         <img src="img/promo_3.png" alt="">
-                        <a href="#bajonera"><p class="text-overlay">Ideal luego de hacerte el loquillo</p></a>
+                        <div class="text-overlay">
+                            <p>Ideal luego de hacerte el loquillo</p>
+                            <a class="item-options" href="#"><i class="fa-solid fa-cart-plus"> $350</i></a>
+                        </div>
                     </div>
                 </div>
-                <div id="bebidas" class="card card-4">
-                    <p class="titulo-card">Bebidas</p>
+
+                <div id="burguers" class="card card-4">
+                    <p class="titulo-card">El Embuche</p>
                     <div class="image-container">
-                        <img src="img/promo_4.png" alt="">
-                        <a href="#bebidas"><p class="text-overlay"></p></a>
+                        <img src="img/banner_burgers.png" alt="">
+                        <div class="text-overlay">
+                            <p>Llevate tres burgers para atragantarte con tus compas</p>
+                            <a href="#" class="item-options"><i class="fa-solid fa-cart-plus"> $850</i></a>
+                            
+                        </div>
                     </div>
                 </div>
             </div>
@@ -118,11 +135,13 @@
                 <button type="submit">Enviar</button>
             </form>
         </section>
+
+        <div class="down-space"></div>
     </main>
 
     <footer id="pie" class="social-media">
         <div class="fb"><i class="fa-brands fa-square-facebook"></i><span>Pizzarriba</span></div>
-        <div class="ig"><i class="fa-brands fa-square-instagram"></i><span>Pizzarriba</span></div>
+        <div class="ig"><i class="fa-brands fa-instagram"></i><span>Pizzarriba</span></div>
         <div class="wpp"><i class="fa-brands fa-whatsapp"></i><span>0123456789</span></div>
     </footer>
     <script src="script.js"></script>

@@ -7,10 +7,11 @@
     color: white;
 }
 
-body {
-    background: url(img/backgroung.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+.background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
 }
 
 header {
@@ -45,20 +46,20 @@ ul {
 }
 
 li {
-    background-color: rgb(235, 170, 15);
-    margin: 0 10px;
-    padding: 3px;
-    border-radius: 5px;
-    
+    margin: 0 5px;    
 }
 
 a {
-    color: black;
+    color: rgb(235, 170, 15);
 }
 
 .trigger {
-    color: black;
+    color: rgb(235, 170, 15);
     cursor: pointer;
+}
+
+.up-space {
+    margin-top: 80px;
 }
 
 main {
@@ -67,8 +68,8 @@ main {
     align-items: center;
 }
 
-.espaciado-top {   
-    margin-top: 100px;
+.down-space { 
+    margin-bottom: 40px;
 }
 
 .social-media {
@@ -92,6 +93,19 @@ main {
 
 .fa-brands {
     margin: 10px;
+    color: rgb(235, 170, 15);
+}
+
+@media (max-width: 360px) {
+    .text-overlay p {
+        font-size: 10px;
+    }
+    .text-overlay a {
+        font-size: 10px;
+    }
+    span {
+        display: none;
+    }
 }
 
 @media (min-width: 665px){
@@ -120,7 +134,7 @@ main {
     }
 }
 
-img, .commit {
+.cine, .commit {
     view-timeline-name: --image;
     view-timeline-axis: block;
 

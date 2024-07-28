@@ -1,0 +1,169 @@
+.cart-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 85vw;
+    height: auto;
+    margin: 5px;
+    /* background-color: rgba(0, 0, 0, 0.9); */
+    /* border: 1px solid rgb(235, 170, 15); */
+    border-radius: 5px;
+
+}
+
+.pedido {
+    width: 90%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 0 30px 0;
+    /* border: 1px solid rgb(235, 170, 15); */
+
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 120px;
+    background-color: rgba(0, 0, 0, 0.9);
+    border: 1px solid rgb(235, 170, 15);
+    border-radius: 10px;
+}
+
+.item img {
+    width: 80px;
+    height: 100px;
+    position: relative;
+    /* top: -10px; */
+    left: -35px;
+    border: 1px solid rgb(235, 170, 15);
+    border-radius: 5px;
+}
+
+.descripcion {
+    max-width: 100px;
+    height: 100%;
+    margin: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    left: -35px;
+}
+
+.cantidad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.add-rest {
+    display: flex;
+    background-color: rgb(235, 170, 15);
+    border-radius: 5px;
+}
+
+.pudding {
+    width: 15px;
+    height: 15px;
+    color: rgba(0, 0, 0, 0.9);
+    border: 0.5px solid black;
+    text-align: center;
+    padding: 3px;
+    line-height: 15px;
+}
+
+.compra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* width: 90%; */
+    height: auto;
+    /* margin: 25px; */
+    /* border: 1px solid rgb(235, 170, 15); */
+}
+
+.discount-container, .payment-container {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    border-radius: 8px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9); */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.discount-container label, .payment-container label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: rgb(235, 170, 15);
+}
+
+.discount-container input, .payment-container input {
+    width: 70%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.discount-container input:focus, .payment-container input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+.discount-container button, .payment-container button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: black;
+    background-color: rgb(235, 170, 15);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.discount-container button:hover, .payment-container button:hover {
+    background-color: #45a049;
+}
+
+.payment-container .methods {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.payment-container .methods img {
+    width: 50px;
+    height: auto;
+}
+
+.methods i {
+    font-size: 30px;
+}
+
+.total {
+    margin: 10px;
+}
+
+@media (min-width: 375px) {
+    .item {
+        width: 290px;
+    }
+}
+
+@media (min-width: 665px) {
+    .cart-box {
+        flex-direction: row;
+    }
+    
+}
