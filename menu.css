@@ -96,3 +96,9 @@
         display: none;
     }
 }
+
+@media (min-width:500px) {
+    .accordion {
+        width: 450px;
+    }
+}
