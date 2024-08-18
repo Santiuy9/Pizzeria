@@ -1,4 +1,4 @@
-.cart-box {
+#cart-box {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -88,6 +88,12 @@
     /* border: 1px solid rgb(235, 170, 15); */
 }
 
+.discount-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .discount-container, .payment-container {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.9);
@@ -106,7 +112,7 @@
 }
 
 .discount-container input, .payment-container input {
-    width: 70%;
+    width: 100%;
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
@@ -121,6 +127,7 @@
 }
 
 .discount-container button, .payment-container button {
+    width: 60%;
     margin-top: 15px;
     padding: 10px 20px;
     font-size: 16px;

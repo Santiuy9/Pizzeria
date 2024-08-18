@@ -171,7 +171,7 @@ img {
 #comentarios {
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.9);
-    color: white;
+    color: black;
     margin: 20px 0;
     
 }
@@ -201,6 +201,7 @@ img {
 
 .form-group input,
 .form-group textarea {
+    color: black;
     width: 90%;
     padding: 10px;
     border: 1px solid #ccc;

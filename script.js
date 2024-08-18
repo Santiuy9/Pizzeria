@@ -11,14 +11,6 @@ if (sliderInner) {
         }
     }, 5000);
 }
-// document.querySelectorAll('.card').forEach(card => {
-//     card.addEventListener('click', function() {
-        
-//         document.querySelectorAll('.card').forEach(c => c.classList.remove('active'));
-        
-//         this.classList.add('active');
-//     });
-// });
 
 document.addEventListener('DOMContentLoaded', function() {
     var toggle = document.getElementById('toggle');
@@ -62,31 +54,3 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
-
-// document.addEventListener('DOMContentLoaded', function() {
-//     var commits = document.querySelectorAll('.commit');
-
-//     // Callback function for Intersection Observer
-//     var callback = function(entries, observer) {
-//         entries.forEach(entry => {
-//             if (entry.isIntersecting) {
-//                 entry.target.style.animation = 'fadeInUp 0.5s ease forwards';
-//                 // Unobserve the entry after animation is applied
-//                 observer.unobserve(entry.target);
-//             }
-//         });
-//     };
-
-//     // Options for the observer (which part of the element to observe)
-//     var options = {
-//         threshold: 0.1
-//     };
-
-//     // Create an Intersection Observer
-//     var observer = new IntersectionObserver(callback, options);
-
-//     // Observe each commit element
-//     commits.forEach(commit => {
-//         observer.observe(commit);
-//     });
-// });

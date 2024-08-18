@@ -10,10 +10,11 @@
 }
 
 .accordion-item {
+    height: auto;
     border: 1px solid rgba(0, 0, 0, 0.2);
     margin: 10px 0;
     border-radius: 5px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .accordion-title {
@@ -42,7 +43,7 @@
 }
 
 .accordion-item input[type="checkbox"]:checked ~ .accordion-content {
-    max-height: 500px; /* Adjust this value as needed */
+    max-height: 1500px; /* Adjust this value as needed */
     padding: 15px;
     opacity: 1; /* Show content */
     background-color: rgba(0, 0, 0, 0.9);
@@ -58,7 +59,19 @@
     transition: background-color 0.3s ease;
 }
 
-.item p {
+.details {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 5px;
+}
+
+.heigth {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.heigth p {
     display: inline;
     max-width: 250px;
 }
@@ -69,17 +82,17 @@
 
 .item-options {
     display: none;
-    position: absolute;
-    top: 50%;
+    /* position: absolute; */
+    /* bottom: 10%; */
     right: 15px;
-    transform: translateY(-50%);
+    /* transform: translateY(-50%); */
     background-color: rgba(0, 0, 0, 0.8);
-    padding: 5px 10px;
+    padding: 5px 5px;
     border-radius: 5px;
 }
 
 .item:hover .item-options {
-    display: block; /* Show options on hover */
+    display: inline; /* Show options on hover */
 }
 
 .item-options a {
