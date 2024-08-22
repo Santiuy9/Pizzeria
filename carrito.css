@@ -1,3 +1,9 @@
+h2 {
+    margin: 10px;
+}
+
+
+
 #cart-box {
     display: flex;
     flex-direction: column;
@@ -36,7 +42,7 @@
 
 .item img {
     width: 100px;
-    height: 100px;
+    height: 80px;
     position: relative;
     /* top: -10px; */
     left: -35px;
@@ -44,7 +50,14 @@
     border-radius: 5px;
 }
 
-.descripcion {
+.titulo {
+    position: relative;
+    top: 0px;
+    left: -30px;
+    max-width: 100px;
+}
+
+.detalle {
     max-width: 100px;
     height: 100%;
     margin: 3px;
@@ -52,7 +65,7 @@
     flex-direction: column;
     justify-content: space-around;
     position: relative;
-    left: -35px;
+    left: -50px;
 }
 
 .cantidad {
@@ -76,6 +89,13 @@
     text-align: center;
     padding: 3px;
     line-height: 15px;
+}
+
+.remove {
+    background-color: rgb(235, 170, 15);
+    padding: 10px;
+    color: black;
+    border-radius: 4px;
 }
 
 .compra {
@@ -158,13 +178,10 @@
     font-size: 30px;
 }
 
-.total {
-    margin: 10px;
-}
 
 @media (min-width: 375px) {
     .item {
-        width: 290px;
+        width: 320px;
     }
 }
 
