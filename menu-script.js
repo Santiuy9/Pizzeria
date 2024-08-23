@@ -28,7 +28,7 @@ document.querySelectorAll('.item-options a').forEach(button => {
         }
 
         localStorage.setItem('cart', JSON.stringify(cart));
-        // alert(`${productName} se ha añadido al carrito.`);
+        alert(`${productName} se ha añadido al carrito.`);
         console.log(cart)
         console.log(product)
 

@@ -33,6 +33,7 @@ h2 {
 .item {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     width: 100%;
     height: 120px;
     background-color: rgba(0, 0, 0, 0.9);
@@ -45,27 +46,52 @@ h2 {
     height: 80px;
     position: relative;
     /* top: -10px; */
-    left: -35px;
+    left: -20px;
     border: 1px solid rgb(235, 170, 15);
     border-radius: 5px;
 }
 
 .titulo {
     position: relative;
-    top: 0px;
-    left: -30px;
-    max-width: 100px;
+    left: -10px;
+    max-width: 90px;
 }
 
 .detalle {
-    max-width: 100px;
+    position: relative;
+    right: -10px;
+    width: 150px;
     height: 100%;
     margin: 3px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    position: relative;
-    left: -50px;
+    align-items: center;
+    
+}
+
+.add-rest button {
+    background-color: rgb(235, 170, 15);
+    padding: 5px 6px;
+    border: solid 1px black;
+    
+}
+.add-rest button:active {
+    background-color: rgb(200, 120, 10);
+    padding: 5px 6px;
+    /* border: solid 1px black; */
+    
+}
+
+.plus-quantity {
+    border-radius: 5px 0 0 5px;
+}
+.min-quantity {
+    border-radius: 0 5px 5px 0;
+}
+
+button i{
+    color: black;
 }
 
 .cantidad {
@@ -77,18 +103,20 @@ h2 {
 
 .add-rest {
     display: flex;
-    background-color: rgb(235, 170, 15);
+    
     border-radius: 5px;
 }
 
 .pudding {
-    width: 15px;
-    height: 15px;
+    background-color: rgb(235, 170, 15);
+    width: 25px;
+    height: 20px;
     color: rgba(0, 0, 0, 0.9);
     border: 0.5px solid black;
+    /* border-radius: 4px; */
     text-align: center;
     padding: 3px;
-    line-height: 15px;
+    line-height: 20px;
 }
 
 .remove {
