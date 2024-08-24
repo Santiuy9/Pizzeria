@@ -6,7 +6,7 @@ document.querySelectorAll('.item-options a').forEach(button => {
         const item = this.closest('.item');
         const productName = item.querySelector('h4').textContent;
         const productPrice = parseInt(this.textContent.trim().split('$')[1], 10);
-        const image = item.querySelector('img') 
+        const image = item.querySelector('img')
         const imageUrl = image.getAttribute('src');
 
         // Crear el objeto del producto
