@@ -103,7 +103,7 @@ main {
     .text-overlay a {
         font-size: 10px;
     }
-    span {
+    .social {
         display: none;
     }
 }

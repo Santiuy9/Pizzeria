@@ -38,7 +38,7 @@ document.querySelectorAll('.text-overlay a').forEach(button => {
             name: cardName,
             price: cardPrice,
             quantity: 1,
-            imagePath: imageUrl
+            imagePath: `../${imageUrl}`
         }
 
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
