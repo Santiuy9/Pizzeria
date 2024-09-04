@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="html/css/index.css">
     <link rel="stylesheet" href="html/css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/xnr5zlv.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" href="img/favicon.png" type="image/x-icon">
     <title>Pizza Club</title>
@@ -55,7 +56,6 @@
                             <a class="item-options" href="#"><i class="fa-solid fa-cart-plus"> $900</i></a>
                         </div>
                     </div>
-                    
                 </div>
 
                 <div id="para2" class="card card-2">
@@ -97,21 +97,21 @@
         <section class="comentarios">
             <h2>Comentarios</h2>
             <div class="commits" id="lista-comentarios">
-                <div class="commit">
+                <div class="commit star-hover-1">
                     <img src="img/avatar.png" alt="">
                     <div>
-                        <h3>Mario Vargas</h3>
+                        <h3>Matias Gonzalez</h3>
                         <p>Todo muy rico</p>
                     </div>
                 </div>
-                <div class="commit">
+                <div class="commit star-hover-3">
                     <img src="img/avatar.png" alt="">
                     <div>
                         <h3>Nicolas Perez</h3>
                         <p>Delicioso</p>
                     </div>
                 </div>
-                <div class="commit">
+                <div class="commit star-hover-2">
                     <img src="img/avatar.png" alt="">
                     <div>
                         <h3>Sebastian Rodriguez</h3>
@@ -121,7 +121,7 @@
             </div>
         </section>
 
-        <section id="comentarios">
+        <section id="comentarios" class="comentarios">
             <h2>Deja tu comentario</h2>
             <form id="form-comentarios">
                 <div class="form-group">
@@ -132,6 +132,19 @@
                     <label for="comentario">Comentario:</label>
                     <textarea id="comentario" name="comentario" rows="4" required></textarea>
                 </div>
+                <div id="comentarios" class="stars">
+                    <input type="radio" name="rating" id="star-1">
+                    <label for="star-1"><i class="fa-solid fa-star"></i></label>
+                    <input type="radio" name="rating" id="star-2">
+                    <label for="star-2"><i class="fa-solid fa-star"></i></label>
+                    <input type="radio" name="rating" id="star-3">
+                    <label for="star-3"><i class="fa-solid fa-star"></i></label>
+                    <input type="radio" name="rating" id="star-4">
+                    <label for="star-4"><i class="fa-solid fa-star"></i></label>
+                    <input type="radio" name="rating" id="star-5">
+                    <label for="star-5"><i class="fa-solid fa-star"></i></label>
+                </div>
+                
                 <button type="submit">Enviar</button>
             </form>
         </section>

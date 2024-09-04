@@ -1,12 +1,8 @@
-// Función para cargar el carrito en carrito.html
 function loadCart() {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     const cartContainer = document.getElementById('cart-box');
     const total = document.getElementById('total');
     const removeButton = document.getElementById('remove')
-    
-    
-
 
     if (cart.length === 0) {
         console.log(cart)
@@ -24,9 +20,6 @@ function loadCart() {
             location.reload()
             console.log(localStorage)
         })
-
-
-
     }
     let precioTotal = 0;
     cart.forEach(product => {      
@@ -47,14 +40,12 @@ function loadCart() {
         `;
         cartContainer.appendChild(productElement);
     
-        // Selecciona los botones y elementos que necesitas actualizar
         const plusButton = productElement.querySelector('.plus-quantity');
         const minusButton = productElement.querySelector('.min-quantity');
         const quantityElement = productElement.querySelector('.pudding');
         const priceElement = productElement.querySelector('.product-price');
         const quitProduct = productElement.querySelector('.quit-product');
     
-        // Evento para aumentar la cantidad
         plusButton.addEventListener('click', () => {
             product.quantity += 1;
             quantityElement.textContent = product.quantity;
@@ -62,9 +53,8 @@ function loadCart() {
             updateCartTotal();
         });
     
-        // Evento para disminuir la cantidad
         minusButton.addEventListener('click', () => {
-            if (product.quantity > 1) {  // Evita que la cantidad sea menor que 1
+            if (product.quantity > 1) {
                 product.quantity -= 1;
                 quantityElement.textContent = product.quantity;
                 priceElement.textContent = `${product.price * product.quantity}`;
@@ -73,7 +63,6 @@ function loadCart() {
         });
 
         quitProduct.addEventListener('click', () => {
-            // console.log(product)
             for (let i = 0; i < cart.length; i++) {
                 console.log(cart[i].name)
                 if (cart[i].name === product.name) {
@@ -88,24 +77,20 @@ function loadCart() {
                 };
             }
         })
-    
         precioTotal += product.price * product.quantity;
         console.log(product.price);
     });
     
-    // Función para actualizar el total del carrito
     function updateCartTotal() {
         let newTotal = 0;
         cart.forEach(product => {
             newTotal += product.price * product.quantity;
         });
         total.innerHTML = `<h2>Total $${newTotal}</h2>`;
-        localStorage.setItem('cart', JSON.stringify(cart)); // Actualiza el carrito en localStorage
+        localStorage.setItem('cart', JSON.stringify(cart));
     }
     
-    updateCartTotal(); // Inicializa el total al cargar el carrito
-    
-    
+    updateCartTotal();
 }
 
 loadCart();

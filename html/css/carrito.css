@@ -54,7 +54,9 @@ h2 {
 .titulo {
     position: relative;
     left: -10px;
-    max-width: 90px;
+    max-width: 15px;
+    font-size: 20px;
+    color: rgb(235, 170, 15);
 }
 
 .detalle {

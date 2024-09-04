@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "stick-no-bills", sans-serif;
     text-decoration: none;
     list-style: none;
     color: white;
@@ -22,6 +22,8 @@ header {
     background-color: rgba(0, 0, 0, 0.9);
     align-items: center;
     justify-content: space-around;
+    font-size: 20px;
+    font-weight: 700;
     animation: slideDown 1s ease-out;
     z-index: 1;
 }
@@ -81,6 +83,8 @@ main {
     width: 100vw;
     height: 30px;
     background-color: rgba(0, 0, 0, 0.9);
+    font-size: 20px;
+    font-weight: 700;
     margin-top: 35px;
     transition: background-color 1s ease, transform 1s ease;
 }
@@ -108,11 +112,14 @@ main {
     }
 }
 
+@media screen and (min-width: 600px) {
+    .commit {
+        width: 450px;
+    }
+}
+
 @media (min-width: 665px){
     .slider {
-        width: 600px;
-    }
-    .commit {
         width: 600px;
     }
 }

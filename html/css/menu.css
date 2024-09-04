@@ -22,6 +22,7 @@
     background-color: rgba(0, 0, 0, 0.8);
     padding: 15px;
     cursor: pointer;
+    font-size: 26px;
     font-weight: bold;
     transition: background-color 0.3s ease;
 }
@@ -65,10 +66,16 @@
     margin: 10px 5px;
 }
 
+.details h4 {
+    font-size: 22px;
+    text-align: center;
+}
+
 .heigth {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 5px;
 }
 
 .heigth p {
@@ -80,7 +87,13 @@
     background-color: rgba(255, 0, 0, 0.2); /* Soft red background on hover */
 }
 
-.item-options {
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.item-buy {
     display: none;
     /* position: absolute; */
     /* bottom: 10%; */
@@ -91,13 +104,22 @@
     border-radius: 5px;
 }
 
-.item:hover .item-options {
-    display: inline; /* Show options on hover */
+.item-edit {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
 }
 
-.item-options a {
+.item-buy a {
     color: white;
     margin: 0 5px;
+}
+
+
+.item:hover .item-buy, .item:hover .item-edit {
+    display: inline; /* Show options on hover */
 }
 
 @media (max-width:500px) {
