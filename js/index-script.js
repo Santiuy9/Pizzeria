@@ -1,4 +1,3 @@
-
 document.querySelectorAll('.text-overlay a').forEach(button => {
     button.addEventListener('click', function(event) {
         event.preventDefault();
@@ -32,55 +31,126 @@ document.querySelectorAll('.text-overlay a').forEach(button => {
     });
 })
 
-const starsContainer = document.querySelector('#comentarios');
-let selectedStarIndex = null; // Guardará el índice de la estrella seleccionada
+const comentContainer = document.querySelector('#comentarios');
+let selectedStarIndex = null; 
 
-// Maneja el hover y la selección de estrellas
+document.querySelectorAll('#form-comentarios input, #form-comentarios textarea').forEach(field => {
+    field.addEventListener('input', () => validateField(field));
+    field.addEventListener('blur', () => validateField(field));
+});
+
+function validateField(field) {
+    if (field.checkValidity()) {
+        field.classList.remove('is-invalid');
+        field.classList.add('is-valid');
+    } else {
+        field.classList.remove('is-valid');
+        field.classList.add('is-invalid');
+    }
+}
+
 document.querySelectorAll('.stars label').forEach((label, index) => {
     label.addEventListener('mouseover', () => {
-        starsContainer.classList.add(`star-hover-${index + 1}`);
+        comentContainer.classList.add(`star-hover-${index + 1}`);
+        comentContainer.classList.remove(`star-selected-${selectedStarIndex}`)
     });
-
+    
     label.addEventListener('mouseout', () => {
-        starsContainer.classList.remove(`star-hover-${index + 1}`);
+        comentContainer.classList.remove(`star-hover-${index + 1}`);
+        comentContainer.classList.add(`star-selected-${selectedStarIndex}`);
     });
-
+    
     label.addEventListener('click', () => {
         selectedStarIndex = index + 1;
-        starsContainer.classList.add(`star-selected-${selectedStarIndex}`);
+        comentContainer.classList.add(`star-selected-${selectedStarIndex}`);
     });
 });
 
-// Maneja el envío del formulario
 document.getElementById('form-comentarios').addEventListener('submit', function(event) {
-    event.preventDefault(); // Evitar el envío del formulario y el recargo de la página
+    event.preventDefault();
 
-    // Obtener los valores del formulario
-    const nombre = document.getElementById('nombre').value;
-    const comentario = document.getElementById('comentario').value;
+    const nombre = document.getElementById('nombre');
+    const comentario = document.getElementById('comentario');
+    let isFormValid = true;
 
-    // Crear un nuevo elemento para el comentario
+    [nombre, comentario].forEach(field => {
+        if (!field.checkValidity()) {
+            validateField(field);
+            isFormValid = false;
+        }
+    });
+
+    if (!isFormValid) return;
+
     const nuevoComentario = document.createElement('div');
     nuevoComentario.classList.add('commit');
 
-    // Si hay una estrella seleccionada, agregar la clase correspondiente
     if (selectedStarIndex !== null) {
         nuevoComentario.classList.add(`star-hover-${selectedStarIndex}`);
     }
 
-    // Añadir el contenido del comentario con la estructura HTML existente
-    nuevoComentario.innerHTML = `
-        <img src="img/avatar.png" alt="">
+    if (selectElement.value === 'Avatar-Femenino') {
+        nuevoComentario.innerHTML = `
+        <img src="img/avatar-female.png" alt="">
         <div>
-            <h3>${nombre}</h3>
-            <p>${comentario}</p>
+            <h3>${nombre.value}</h3>
+            <p>${comentario.value}</p>
         </div>
     `;
+    }
+    
+    if (selectElement.value === 'Avatar-Masculino') {
+        nuevoComentario.innerHTML = `
+        <img src="img/avatar-male.png" alt="">
+        <div>
+            <h3>${nombre.value}</h3>
+            <p>${comentario.value}</p>
+        </div>
+    `;
+    }
 
-    // Añadir el comentario al contenedor de comentarios
+    if (selectElement.value === 'Otro') {
+        nuevoComentario.innerHTML = `
+        <img src="${document.querySelector('.avatar-image input').value}" alt="">
+        <div>
+            <h3>${nombre.value}</h3>
+            <p>${comentario.value}</p>
+        </div>
+    `;
+    }
+
+    nuevoComentario.style.borderColor = colorInput.value;
+    nuevoComentario.style.borderWidth = '2px'
+    nuevoComentario.style.borderStyle = 'solid'
+
     document.getElementById('lista-comentarios').appendChild(nuevoComentario);
-
-    // Limpiar el formulario después de enviar
     document.getElementById('form-comentarios').reset();
+    document.querySelectorAll('input, textarea').forEach(field => {
+        field.classList.remove('is-valid', 'is-invalid');
+    });
+    
+    comentContainer.classList.remove(`star-selected-${selectedStarIndex}`)
+    avatarImgContainer.style.display = 'none';
 });
 
+const colorInput = document.getElementById('borderColor');
+
+colorInput.addEventListener('input', function() {
+    comentContainer.style.borderColor = colorInput.value;
+    comentContainer.style.borderWidth = '2px';
+    comentContainer.style.borderStyle = 'solid';
+});
+
+const selectElement = document.getElementById('avatar');
+const avatarImgContainer = document.getElementById('avatar-image');
+
+selectElement.addEventListener('change', () => {
+    const selectValue = selectElement.value;
+    console.log(`Has elegido: ${selectValue}`)
+    if (selectElement.value === 'Otro') {
+        avatarImgContainer.style.display = 'block';
+    }
+    else {
+        avatarImgContainer.style.display = 'none';
+    }
+});

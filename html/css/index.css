@@ -84,10 +84,6 @@ img {
     transition: transform 0.5s ease;
 }
 
-/* .card .titulo-card {
-    padding: 5px;
-} */
-
 .card:hover {
     transform: scale(1.25);
     background-color: rgb(235, 170, 15);
@@ -119,7 +115,6 @@ img {
     to {
         opacity: 1;
     }
-    
 }
 
 .commits {
@@ -134,6 +129,7 @@ img {
     height: 75px;
     background-color: rgba(0, 0, 0, 0.9);
     margin: 5px 0;
+    border: 2px solid white;
     /* opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 0.5s ease forwards; */
@@ -146,13 +142,13 @@ img {
 }
 
 .commit:nth-child(1) {
-    animation-delay: 0.2s;
+    border: 2px solid white;
 }
 .commit:nth-child(2) {
-    animation-delay: 0.4s;
+    border: 2px solid orangered;
 }
 .commit:nth-child(3) {
-    animation-delay: 0.6s;
+    border: 2px solid rebeccapurple;
 }
 
 @keyframes fadeInUp { 
@@ -172,10 +168,10 @@ img {
     color: black;
     margin: 20px 0;
     transition: background-color 0.3s ease;
-    
+    border: 2px solid white;
 }
 
-#comentarios h2 {
+.comentarios h2 {
     text-align: center;
     margin-bottom: 20px;
 }
@@ -203,8 +199,21 @@ img {
     color: black;
     width: 90%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 2px solid red;
     border-radius: 5px;
+}
+
+.form-group select {
+    color: black;
+    padding: 10px;
+}
+
+.form-group option {
+    color: black;
+}
+
+.avatar-image {
+    margin-top: 10px;
 }
 
 .stars {
@@ -256,24 +265,51 @@ button[type="submit"]:hover {
     background-color: rgb(200, 150, 10);
 }
 
+.star-selected-1,
 .star-hover-1 {
     background-color: rgba(0, 100, 0, 0.9);
 }
 
+.star-selected-2,
 .star-hover-2 {
     background-color: rgba(155, 205, 50, 0.9);
 }
 
+.star-selected-3,
 .star-hover-3 {
     background-color: rgba(255, 255, 0, 0.9)
 }
 
+.star-selected-4,
 .star-hover-4 {
     background-color: rgba(255, 70, 0, 0.9)
 }
 
+.star-selected-5,
 .star-hover-5 {
     background-color: rgba(255, 0, 0, 0.9)
 }
 
+input.is-invalid, textarea.is-invalid {
+    border: 2px solid red;
+}
 
+input.is-valid, textarea.is-valid {
+    border: 2px solid green;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.borderContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.borderContainer input {
+    width: 50px;
+    margin: 15px;
+}

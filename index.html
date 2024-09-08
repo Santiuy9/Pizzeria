@@ -98,21 +98,21 @@
             <h2>Comentarios</h2>
             <div class="commits" id="lista-comentarios">
                 <div class="commit star-hover-1">
-                    <img src="img/avatar.png" alt="">
+                    <img src="img/avatar-female.png" alt="">
                     <div>
-                        <h3>Matias Gonzalez</h3>
+                        <h3>Lorena Ipsumia</h3>
                         <p>Todo muy rico</p>
                     </div>
                 </div>
                 <div class="commit star-hover-3">
-                    <img src="img/avatar.png" alt="">
+                    <img src="img/avatar-male.png" alt="">
                     <div>
                         <h3>Nicolas Perez</h3>
                         <p>Delicioso</p>
                     </div>
                 </div>
                 <div class="commit star-hover-2">
-                    <img src="img/avatar.png" alt="">
+                    <img src="img/avatar-male.png" alt="">
                     <div>
                         <h3>Sebastian Rodriguez</h3>
                         <p>Haaaarmosooooo!</p>
@@ -122,15 +122,31 @@
         </section>
 
         <section id="comentarios" class="comentarios">
-            <h2>Deja tu comentario</h2>
+            <h2>Deja tu comentario estilizado</h2>
             <form id="form-comentarios">
                 <div class="form-group">
                     <label for="nombre">Nombre:</label>
                     <input type="text" id="nombre" name="nombre" required>
                 </div>
                 <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
                     <label for="comentario">Comentario:</label>
                     <textarea id="comentario" name="comentario" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="avatar">Imagen del Avatar</label>
+                    <select name="avatar" id="avatar">
+                        <option value="Avatar-Masculino">Avatar Masculino</option>
+                        <option value="Avatar-Femenino">Avatar Femenino</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                    <div id="avatar-image" class="avatar-image" style="display: none;">
+                        <label for="imagen">Imagen</label>
+                        <input type="text" name="imagen" placeholder="Avatar Masculino">
+                    </div>
                 </div>
                 <div id="comentarios" class="stars">
                     <input type="radio" name="rating" id="star-1">
@@ -144,7 +160,10 @@
                     <input type="radio" name="rating" id="star-5">
                     <label for="star-5"><i class="fa-solid fa-star"></i></label>
                 </div>
-                
+                <div class="borderContainer">
+                    <label for="borderColor">Color del borde del comentario =)</label>
+                    <input type="color" name="borderColor" id="borderColor" value="#ffffff">
+                </div>
                 <button type="submit">Enviar</button>
             </form>
         </section>
